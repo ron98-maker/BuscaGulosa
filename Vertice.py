@@ -1,4 +1,4 @@
-from Adjacente import Adjacente
+
 class Vertice:
     def __init__(self, rotulo, distancia):
         self.rotulo = rotulo
