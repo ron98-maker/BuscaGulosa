@@ -4,21 +4,26 @@ class Gulosa:
     def __init__(self):
         self.objetivo = "Bucareste"
         self.status = False
+        self.caminho = []
 
     def buscar(self, vertice):
 
         print(f"Vertice atual: {vertice.rotulo} Distância: {vertice.distancia}")
         vertice.visitado = True
+        self.caminho.append(vertice)
         if vertice.rotulo == self.objetivo:
             self.status = True
             print("")
             print(f"Objetivo {self.objetivo} encontrado!")
+
+            for c in self.caminho:
+                print(c.rotulo)
+
             return True
         else:
             vetor_adjacentes = []
             for adj in vertice.adjacentes:
                 if adj.vertice.visitado == False:
-                    adj.vertice.visitado = True
                     vetor_adjacentes.append(adj.vertice)
 
             vetor_adjacentes.sort(key=lambda x: x.distancia)
