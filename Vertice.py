@@ -47,7 +47,7 @@ class Vertice:
         else:
             print(f"Adjacentes do vértice {self.rotulo}")
             for adjacente in self.adjacentes:
-                print(f"Vértice: {adjacente.vertice.rotulo} Distância: {adjacente.vertice.distancia}")
+                print(f"Vértice: {adjacente.vertice.rotulo} Distância: {adjacente.vertice.distancia + adjacente.custo}")
 
     
 
