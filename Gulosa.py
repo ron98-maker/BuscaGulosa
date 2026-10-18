@@ -12,7 +12,7 @@ class Gulosa:
         if vertice.rotulo == self.objetivo:
             self.status = True
             print("")
-            print(f"Objetivo {self.objetivo} encontrado!")
+            print(f"Objetivo {self.objetivo} encontrado")
             return True
         else:
             vetor_adjacentes = []
